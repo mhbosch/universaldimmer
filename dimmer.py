@@ -41,7 +41,7 @@ def DimNow(Item):
         del dimmertimers[Item]
 
 @log_traceback
-@rule(RULE_NAME, description="Das ist Boschi sein Test um Timer zu verstehen", tags=["sensor"])
+@rule(RULE_NAME, description="Universaldimmer fuer Openhab", tags=["sensor"])
 @when("Item universaldimmer received command")
  
 def dimmer(event):
