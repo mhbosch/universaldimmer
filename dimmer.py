@@ -21,7 +21,7 @@ def DimNow(Item):
         interval = dimmertimers[Item]['FadeStepMS']
 
         if iteration >= (int(dimmertimers[Item]['loops'])):
-            events.sendCommand(Item, int(str(dimmertimers[Item]['TargetValue'])))
+            events.sendCommand(Item, str(dimmertimers[Item]['TargetValue']))
             dimmertimers[Item]['timer'].cancel()
             iteration = 0
             dimmertimers[Item]['timer'] = None
